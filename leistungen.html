@@ -7,14 +7,26 @@
   <meta name="description" content="Hausarztmedizin, Innere Medizin, Untersuchungen in der Praxis und Notfallmedizin im MedCenter Volta, Basel.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css?v=2026-10-01e">
-  <script src="js/menu.js?v=2026-10-01e" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=2026-10-02b">
+  <script src="js/menu.js?v=2026-10-02b" defer></script>
 </head>
 <body>
   <div class="preview-banner" role="note">
     <strong>Design-Vorschau</strong> – dies ist noch nicht die offizielle Website. Aktuelle Website: <a href="https://medcentervolta.ch">medcentervolta.ch</a>
   </div>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- ===== Info-Leiste ===== -->
+  <div class="topbar">
+    <div class="container">
+      <span><a href="tel:+41613226111">061 322 61 11</a></span>
+      <span>Lothringerplatz 2, 4056 Basel</span>
+      <span class="topbar-extra">Notfall: <a href="tel:+41612611515">061 261 15 15</a></span>
+    </div>
+  </div>
 
   <!-- ===== Kopfzeile ===== -->
   <header class="site-header">
@@ -56,7 +68,7 @@
     <section class="page-hero">
       <div class="container">
         <span class="eyebrow">Leistungen</span>
-        <h1>Wir bieten Ihnen eine umfassende Behandlung an</h1>
+        <h1>Wir bieten Ihnen eine <span class="gold">umfassende Behandlung</span> an</h1>
         <p class="lead">In hellen, modernen Räumen bieten wir Ihnen eine breite Palette ambulanter Leistungen an – vieles direkt bei uns in der Praxis.</p>
       </div>
     </section>
@@ -64,10 +76,10 @@
     <!-- Hausarztmedizin -->
     <section class="section" id="hausarzt" style="padding-top: 16px;">
       <div class="container split">
-        <div class="media"><img src="img/praxis-empfang-bild.jpg" alt="Empfangsbereich des MedCenter Volta" width="1260" height="494" loading="lazy"></div>
+        <div class="media media-framed"><img src="img/praxis-wartezimmer.jpg" alt="Heller Wartebereich mit Pflanzen" width="1260" height="494" loading="lazy"></div>
         <div>
           <span class="icon" style="margin-bottom: 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
-          <h2>Hausarztmedizin und Innere Medizin</h2>
+          <h2>Hausarztmedizin und <span class="gold">Innere Medizin</span></h2>
           <p>Als Ihre Hausarztpraxis sind wir Ihre erste Anlaufstelle: Wir klären akute und chronische internistische Erkrankungen ab und behandeln sie.</p>
           <ul class="check-list">
             <li>Checkup-Untersuchungen</li>
@@ -83,10 +95,13 @@
     <!-- Apparative Untersuchungen -->
     <section class="section section-soft" id="untersuchungen">
       <div class="container split split-reverse">
-        <div class="media"><img src="img/praxis-roentgen.jpg" alt="Praxisgang mit Tür zum Röntgenraum" width="1260" height="494" loading="lazy"></div>
+        <div class="thumb-row">
+            <div class="media thumb"><img src="img/bild-ekg.jpg" alt="EKG-Kurve mit Stethoskop" width="270" height="180" loading="lazy"></div>
+            <div class="media thumb"><img src="img/bild-roentgen.jpg" alt="Röntgenbild des Brustkorbs" width="215" height="215" loading="lazy"></div>
+          </div>
         <div>
           <span class="icon" style="margin-bottom: 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>
-          <h2>Untersuchungen in der Praxis</h2>
+          <h2>Untersuchungen <span class="gold">in der Praxis</span></h2>
           <p>Viele Untersuchungen machen wir direkt vor Ort. So sparen Sie sich zusätzliche Wege.</p>
           <ul class="check-list">
             <li>EKG und Langzeit-EKG</li>
@@ -96,10 +111,6 @@
             <li>Schlafanalyse (nächtliche Pulsoxymetrie)</li>
             <li>Blutentnahmen und Laboranalysen, inkl. Notfalllabor</li>
           </ul>
-          <div class="thumb-row">
-            <div class="media thumb"><img src="img/bild-ekg.jpg" alt="EKG-Kurve mit Stethoskop" width="270" height="180" loading="lazy"></div>
-            <div class="media thumb"><img src="img/bild-roentgen.jpg" alt="Röntgenbild des Brustkorbs" width="215" height="215" loading="lazy"></div>
-          </div>
         </div>
       </div>
     </section>
@@ -107,16 +118,15 @@
     <!-- Notfall -->
     <section class="section" id="notfall">
       <div class="container split">
-        <div class="media"><img src="img/praxis-gang.jpg" alt="Heller Praxisgang mit Behandlungsräumen" width="1260" height="494" loading="lazy"></div>
+        <div class="thumb-row">
+            <div class="media thumb"><img src="img/bild-verband.jpg" alt="Fuss wird mit einer elastischen Binde verbunden" width="270" height="180" loading="lazy"></div>
+            <div class="media thumb"><img src="img/bild-verband-hand.jpg" alt="Verbundene Hand" width="400" height="267" loading="lazy"></div>
+          </div>
         <div>
           <span class="icon" style="margin-bottom: 14px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
           <h2>Notfallmedizin</h2>
           <p>Wir kümmern uns um Ihre Notfälle. Wundversorgungen können wir in unserem Praxis-OP vornehmen. Bitte rufen Sie uns während der Öffnungszeiten an:</p>
           <p><a class="btn btn-primary" href="tel:+41613226111">061 322 61 11 anrufen</a></p>
-          <div class="thumb-row">
-            <div class="media thumb"><img src="img/bild-verband.jpg" alt="Fuss wird mit einer elastischen Binde verbunden" width="270" height="180" loading="lazy"></div>
-            <div class="media thumb"><img src="img/bild-verband-hand.jpg" alt="Verbundene Hand" width="400" height="267" loading="lazy"></div>
-          </div>
           <div class="notice notice-emergency">
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
             <p>Ausserhalb unserer Öffnungszeiten erreichen Sie die Medizinische Notfallzentrale unter <a href="tel:+41612611515">061 261 15 15</a>.</p>
@@ -169,7 +179,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="img/logo.svg" alt="MedCenter Volta" width="150" height="94">
+          <div class="footer-logo">MedCenter Volta<small>BASEL</small></div>
           <p style="margin-top: 14px;">Ihre persönliche Hausarzt- und Spezialarztpraxis in Basel.</p>
         </div>
         <div>

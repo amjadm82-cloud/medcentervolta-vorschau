@@ -7,14 +7,26 @@
   <meta name="description" content="MedCenter Volta: Ihre persönliche Hausarzt- und Spezialarztpraxis im St. Johann-Quartier in Basel, direkt am Lothringerplatz.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/style.css?v=2026-10-01e">
-  <script src="js/menu.js?v=2026-10-01e" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css?v=2026-10-02b">
+  <script src="js/menu.js?v=2026-10-02b" defer></script>
 </head>
 <body>
   <div class="preview-banner" role="note">
     <strong>Design-Vorschau</strong> – dies ist noch nicht die offizielle Website. Aktuelle Website: <a href="https://medcentervolta.ch">medcentervolta.ch</a>
   </div>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- ===== Info-Leiste ===== -->
+  <div class="topbar">
+    <div class="container">
+      <span><a href="tel:+41613226111">061 322 61 11</a></span>
+      <span>Lothringerplatz 2, 4056 Basel</span>
+      <span class="topbar-extra">Notfall: <a href="tel:+41612611515">061 261 15 15</a></span>
+    </div>
+  </div>
 
   <!-- ===== Kopfzeile ===== -->
   <header class="site-header">
@@ -58,7 +70,7 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Willkommen im MedCenter Volta</span>
-          <h1>Ihre persönliche Hausarzt- und Spezialarztpraxis in Basel</h1>
+          <h1>Ihre persönliche <span class="gold">Hausarzt- und Spezialarztpraxis</span> in Basel</h1>
           <p class="lead">Mitten im St.&nbsp;Johann-Quartier, direkt am Lothringerplatz, bieten wir Ihnen in hellen, modernen Räumen eine breite Palette ambulanter Leistungen an – mit einem Team, das sich gerne um Sie kümmert.</p>
           <div class="btn-row">
             <a class="btn btn-primary" href="https://termine.epaad.ch/mcv" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Termin anfragen</a>
@@ -66,7 +78,7 @@
             <a class="btn btn-outline" href="tel:+41613226111"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Anrufen</a>
           </div>
         </div>
-        <div class="media media-hero">
+        <div class="media media-hero media-framed">
           <img src="img/praxis-empfang.jpg" alt="Empfang des MedCenter Volta mit Logo" width="1260" height="494">
         </div>
       </div>
@@ -105,28 +117,31 @@
     </div>
 
     <!-- ===== Leistungen (Vorschau) ===== -->
-    <section class="section">
+    <section class="section section-dark" style="margin-top: 72px;">
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Unser Angebot</span>
-          <h2>Wofür Sie zu uns kommen können</h2>
+          <h2>Wofür Sie zu uns <span class="gold">kommen können</span></h2>
           <p>Vom Checkup bis zur Wundversorgung: Vieles erledigen wir direkt bei uns in der Praxis – ohne lange Wege für Sie.</p>
         </div>
         <div class="cards">
           <article class="card card-has-media">
             <div class="card-media"><img src="img/bild-ekg.jpg" alt="EKG-Kurve mit Stethoskop" width="270" height="180" loading="lazy"></div>
+            <span class="card-num">01</span>
             <h3>Hausarztmedizin &amp; Innere Medizin</h3>
             <p>Betreuung durch Ihren persönlichen Hausarzt – bei akuten und chronischen Beschwerden, für Checkups und Gesundheitsberatung.</p>
             <a class="more" href="leistungen.html#hausarzt">Mehr erfahren</a>
           </article>
           <article class="card card-has-media">
             <div class="card-media"><img src="img/bild-roentgen.jpg" alt="Röntgenbild des Brustkorbs" width="215" height="215" loading="lazy"></div>
+            <span class="card-num">02</span>
             <h3>Untersuchungen in der Praxis</h3>
             <p>EKG, Röntgen, Lungenfunktion, 24-Stunden-Blutdruckmessung und Labor – alles unter einem Dach.</p>
             <a class="more" href="leistungen.html#untersuchungen">Mehr erfahren</a>
           </article>
           <article class="card card-has-media">
             <div class="card-media"><img src="img/bild-verband.jpg" alt="Fuss wird mit einer elastischen Binde verbunden" width="270" height="180" loading="lazy"></div>
+            <span class="card-num">03</span>
             <h3>Notfälle</h3>
             <p>Wir behandeln Ihren Notfall in unserer Praxis. Wundversorgungen führen wir in unserem Praxis-OP durch.</p>
             <a class="more" href="leistungen.html#notfall">Mehr erfahren</a>
@@ -138,9 +153,10 @@
     <!-- ===== Rezept ===== -->
     <section class="section section-soft">
       <div class="container">
-        <div class="cta-band">
+        <div class="cta-band cta-light">
           <div>
-            <h2>Rezept anfragen – ganz einfach online</h2>
+            <span class="eyebrow">Rezept anfragen</span>
+            <h2>Rezept anfragen – <span class="gold">ganz einfach online</span></h2>
             <p>Sie brauchen ein Rezept für ein Medikament? Senden Sie uns Ihre Anfrage über das Formular. Sie geht direkt an die Ärztin oder den Arzt, den Sie auswählen.</p>
           </div>
           <div class="btn-row">
@@ -152,13 +168,12 @@
 
     <!-- ===== Persönliche Betreuung ===== -->
     <section class="section">
-      <div class="container split">
-        <div class="media">
-          <img src="img/praxis-empfang-bild.jpg" alt="Empfangsbereich mit Kunstwerk und Blick in den Praxisgang" width="1260" height="494" loading="lazy">
-        </div>
+      <div class="container split" style="align-items: start;">
         <div>
           <span class="eyebrow">Persönliche Betreuung</span>
-          <h2>Im Mittelpunkt stehen Sie</h2>
+          <h2>Im Mittelpunkt <span class="gold">stehen Sie</span></h2>
+        </div>
+        <div class="statement">
           <p>Ihre Ärztin oder Ihr Arzt geht auf Ihre persönlichen Gesundheitsanliegen ein. Ein ausführliches Gespräch und eine sorgfältige Untersuchung – wo nötig ergänzt durch Abklärungen direkt in der Praxis – bilden die Grundlage für die passende Behandlung.</p>
           <p>Unsere Ärztinnen und Ärzte vertreten sich gegenseitig. So ist auch dann jemand aus unserem Team für Sie da, wenn Ihre Ärztin oder Ihr Arzt einmal abwesend ist.</p>
         </div>
@@ -170,7 +185,7 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">Unser Team</span>
-          <h2>Menschen, die für Sie da sind</h2>
+          <h2>Menschen, die <span class="gold">für Sie da sind</span></h2>
           <p>Wir sind ein Team aus engagierten Praxisassistentinnen sowie Fachärztinnen und Fachärzten mit langjähriger Berufserfahrung.</p>
         </div>
         <div class="doctor-row">
@@ -202,12 +217,12 @@
     <!-- ===== Gut zu wissen ===== -->
     <section class="section">
       <div class="container split split-reverse">
-        <div class="media">
+        <div class="media media-framed">
           <img src="img/praxis-wartezimmer.jpg" alt="Heller Wartebereich mit Pflanzen" width="1260" height="494" loading="lazy">
         </div>
         <div>
           <span class="eyebrow">Ihr Besuch bei uns</span>
-          <h2>Gut zu wissen</h2>
+          <h2>Gut zu <span class="gold">wissen</span></h2>
           <ul class="check-list">
             <li>Bei Erkältung, Husten oder Niesen tragen Sie bitte eine Maske.</li>
             <li>Der Platz im Wartebereich ist begrenzt – bitte kommen Sie nicht vor der vereinbarten Zeit.</li>
@@ -223,7 +238,7 @@
       <div class="container">
         <div class="section-head">
           <span class="eyebrow">So finden Sie uns</span>
-          <h2>Direkt am Lothringerplatz</h2>
+          <h2>Direkt am <span class="gold">Lothringerplatz</span></h2>
           <p>Lothringerplatz 2, 4056 Basel – Tram 1, 11 und 21 bis Voltaplatz, Parkhaus Coop Voltacenter direkt gegenüber.</p>
         </div>
         <div class="map-consent" data-map-src="https://maps.google.com/maps?q=MedCenter%20Volta%2C%20Lothringerplatz%202%2C%204056%20Basel&t=m&z=15&output=embed&iwloc=near">
@@ -252,7 +267,7 @@
 
         <div class="cta-band">
           <div>
-            <h2>Wir freuen uns auf Sie</h2>
+            <h2>Wir freuen uns <span class="gold">auf Sie</span></h2>
             <p>Buchen Sie Ihren Termin bequem online oder rufen Sie uns während der Telefonzeiten an.</p>
           </div>
           <div class="btn-row">
@@ -325,7 +340,7 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="img/logo.svg" alt="MedCenter Volta" width="150" height="94">
+          <div class="footer-logo">MedCenter Volta<small>BASEL</small></div>
           <p style="margin-top: 14px;">Ihre persönliche Hausarzt- und Spezialarztpraxis in Basel.</p>
         </div>
         <div>
