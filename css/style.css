@@ -765,3 +765,18 @@ p { margin: 0 0 1em; }
   padding: 8px 16px;
 }
 .preview-banner a { color: inherit; font-weight: 600; }
+
+/* ---------- Öffnungs- und Telefonzeiten klar trennen ---------- */
+.hours-label {
+  display: block;
+  margin: 10px 0 2px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.site-footer .hours-label { margin-top: 12px; }
+.site-footer .hours-label:first-of-type { margin-top: 0; }
+.quick-card .hours-label { margin-top: 6px; }
+.quick-card div > span:not(.hours-label) { display: block; }
