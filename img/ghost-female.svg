@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Platzhalter-Porträt">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3f1"/>
+      <stop offset="1" stop-color="#dfe7e4"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- Haare hinten -->
+  <path d="M200 66c-60 0-96 46-96 108 0 44 7 82 20 110h152c13-28 20-66 20-110 0-62-36-108-96-108z" fill="#b4c4bf"/>
+  <!-- Hals -->
+  <rect x="176" y="226" width="48" height="70" rx="22" fill="#cfdad6"/>
+  <!-- Schultern -->
+  <path d="M64 400c0-74 56-120 136-120s136 46 136 120z" fill="#c3d1cc"/>
+  <!-- Gesicht -->
+  <ellipse cx="200" cy="168" rx="56" ry="68" fill="#cfdad6"/>
+  <!-- Pony -->
+  <path d="M142 162c2-54 32-84 66-84 38 0 62 30 58 78-24-24-60-36-124 6z" fill="#b4c4bf"/>
+</svg>
