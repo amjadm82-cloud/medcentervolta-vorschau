@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="Illustriertes Porträt Leticia Sande Fondo">
+  <!-- Hintergrund: ruhige Praxis-Szene im Stil der übrigen Illustration -->
+  <rect width="800" height="800" fill="#ece6dc"/>
+  <rect x="0" y="0" width="800" height="300" fill="#dde6e4"/>
+  <rect x="470" y="40" width="250" height="250" fill="#cfdedd"/>
+  <rect x="40" y="250" width="200" height="300" fill="#e3cfc4"/>
+  <rect x="0" y="560" width="800" height="240" fill="#e6ddd0"/>
+  <!-- Pflanze -->
+  <rect x="640" y="470" width="70" height="80" fill="#b9c7c7"/>
+  <path d="M675 470 C640 420 620 400 600 360 C640 380 660 410 675 450 C680 400 690 370 720 330 C715 380 700 420 680 470 Z" fill="#9fb5b3"/>
+  <!-- Haar hinten (Dutt) -->
+  <circle cx="400" cy="185" r="62" fill="#4a3426"/>
+  <ellipse cx="400" cy="300" rx="128" ry="140" fill="#4a3426"/>
+  <!-- Hals -->
+  <path d="M362 400 h76 v70 c0 20 -76 20 -76 0 z" fill="#c98f6c"/>
+  <!-- Oberkörper: Polo in Praxisrot -->
+  <path d="M150 800 C150 600 230 520 400 505 C570 520 650 600 650 800 Z" fill="#8e1c2a"/>
+  <path d="M342 480 L400 545 L458 480 L478 500 L400 590 L322 500 Z" fill="#a52637"/>
+  <path d="M400 545 V650" stroke="#6f1520" stroke-width="5"/>
+  <circle cx="400" cy="585" r="6" fill="#c94455"/>
+  <circle cx="400" cy="625" r="6" fill="#c94455"/>
+  <!-- Logo auf der Brust -->
+  <g transform="translate(520 640)">
+    <path d="M0 0 L22 -26 L18 4 Z" fill="#e2733d"/>
+    <path d="M10 6 L34 -20 L22 18 Z" fill="#f4efe8"/>
+  </g>
+  <!-- Gesicht -->
+  <ellipse cx="400" cy="320" rx="100" ry="115" fill="#d79c78"/>
+  <!-- Ohren -->
+  <ellipse cx="300" cy="330" rx="16" ry="24" fill="#cb8f6b"/>
+  <ellipse cx="500" cy="330" rx="16" ry="24" fill="#cb8f6b"/>
+  <circle cx="300" cy="352" r="5" fill="#e8c46a"/>
+  <circle cx="500" cy="352" r="5" fill="#e8c46a"/>
+  <!-- Haar vorne, Mittelscheitel nach hinten -->
+  <path d="M298 300 C295 215 345 190 400 190 C455 190 505 215 502 300 C485 250 450 228 400 226 C350 228 315 250 298 300 Z" fill="#4a3426"/>
+  <!-- Augenbrauen -->
+  <path d="M345 292 q22 -12 44 -2" stroke="#3a281d" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M411 290 q22 -10 44 2" stroke="#3a281d" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- Augen -->
+  <ellipse cx="367" cy="320" rx="17" ry="15" fill="#fff"/>
+  <ellipse cx="433" cy="320" rx="17" ry="15" fill="#fff"/>
+  <circle cx="368" cy="321" r="10" fill="#2b1d16"/>
+  <circle cx="434" cy="321" r="10" fill="#2b1d16"/>
+  <circle cx="371" cy="317" r="3" fill="#fff"/>
+  <circle cx="437" cy="317" r="3" fill="#fff"/>
+  <!-- Nase, Wangen, Lächeln -->
+  <path d="M400 335 q-8 22 0 30" stroke="#b77a58" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="345" cy="365" r="16" fill="#e39a86" opacity=".45"/>
+  <circle cx="455" cy="365" r="16" fill="#e39a86" opacity=".45"/>
+  <path d="M365 385 q35 28 70 0" stroke="#8e3b35" stroke-width="7" fill="none" stroke-linecap="round"/>
+</svg>
