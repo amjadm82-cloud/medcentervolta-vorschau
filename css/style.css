@@ -11,11 +11,13 @@
   --sand-2: #ede8df;
   --ink: #1c1c1a;
   --dark: #1c1c1a;
-  --darker: #121211;
+  --darker: #2e4a44;        /* Tannengrün: obere Leiste + Fusszeile */
+  --sage-light: #e9efec;    /* helles Salbeigrün: Flächen statt Schwarz */
+  --sage-line: #d3dfdb;
   --text: #2a2926;
   --muted: #5e5a52;
   --line: #e3dccf;
-  --line-dark: #34322d;
+  --line-dark: #45625b;
 
   --gold: #8a6a22;        /* Buttons (weisse Schrift gut lesbar) */
   --gold-text: #7d5e10;   /* Labels, Links auf hellem Grund */
@@ -357,16 +359,16 @@ p { margin: 0 0 1em; }
 .split { display: grid; gap: 40px; align-items: center; }
 
 /* Dunkle Sektion */
-.section-dark { background: var(--dark); color: #cfc8bb; }
-.section-dark h2, .section-dark h3 { color: #fff; }
-.section-dark .gold { color: var(--gold-light); }
-.section-dark .eyebrow { color: var(--gold-light); }
-.section-dark .eyebrow::before { background: var(--gold-light); }
-.section-dark .section-head p { color: #b9b2a5; }
+.section-dark { background: var(--sage-light); color: var(--text); }
+.section-dark h2, .section-dark h3 { color: var(--ink); }
+.section-dark .gold { color: var(--gold-text); }
+.section-dark .eyebrow { color: var(--gold-text); }
+.section-dark .eyebrow::before { background: var(--gold-soft); }
+.section-dark .section-head p { color: var(--muted); }
 
 /* ---------- Leistungs-Karten (nummeriert) ---------- */
 .cards { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); }
-.section-dark .cards { background: var(--line-dark); border-color: var(--line-dark); }
+.section-dark .cards { background: var(--sage-line); border-color: var(--sage-line); }
 .card {
   position: relative;
   background: var(--cream);
@@ -375,8 +377,8 @@ p { margin: 0 0 1em; }
   flex-direction: column;
   gap: 4px;
 }
-.section-dark .card { background: var(--dark); }
-.section-dark .card p { color: #b9b2a5; }
+.section-dark .card { background: #fff; }
+.section-dark .card p { color: var(--muted); }
 .card p { color: var(--muted); margin-bottom: 0.8em; }
 .card .icon { margin-bottom: 18px; }
 .card-num {
@@ -387,7 +389,7 @@ p { margin: 0 0 1em; }
   color: var(--gold-text);
   margin-bottom: 14px;
 }
-.section-dark .card-num { color: var(--gold-light); }
+.section-dark .card-num { color: var(--gold-text); }
 .card-media {
   aspect-ratio: 3 / 2;
   overflow: hidden;
@@ -405,7 +407,7 @@ p { margin: 0 0 1em; }
   text-decoration: none;
   color: var(--gold-text);
 }
-.section-dark .card .more { color: var(--gold-light); }
+.section-dark .card .more { color: var(--gold-text); }
 .card .more::after { content: "  →"; }
 
 /* ---------- Haken-Liste ---------- */
@@ -494,7 +496,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- CTA-Band ---------- */
 .cta-band {
-  background: var(--dark);
+  background: var(--sage-light);
   color: #cfc8bb;
   padding: 44px 26px;
   display: grid;
@@ -505,14 +507,14 @@ p { margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 10px;
-  border: 1px solid var(--line-dark);
+  border: 1px solid var(--sage-line);
   pointer-events: none;
 }
-.cta-band h2 { color: #fff; margin-bottom: 0.3em; }
-.cta-band p { color: #b9b2a5; margin: 0; }
+.cta-band h2 { color: var(--ink); margin-bottom: 0.3em; }
+.cta-band p { color: var(--muted); margin: 0; }
 .cta-band .btn-row { position: relative; }
-.cta-band .btn-outline { color: #fff; border-color: #fff; }
-.cta-band .btn-outline:hover { background: #fff; color: var(--ink); }
+.cta-band .btn-outline { color: var(--ink); border-color: var(--ink); }
+.cta-band .btn-outline:hover { background: var(--ink); color: #fff; }
 
 /* ---------- Fusszeile ---------- */
 .site-footer {
@@ -535,7 +537,7 @@ p { margin: 0 0 1em; }
 .site-footer li { padding: 3px 0; }
 .site-footer a { color: #e9e3d8; text-decoration: none; }
 .site-footer a:hover { color: var(--gold-light); }
-.site-footer .hours-label { color: #8f887b; margin-top: 14px; }
+.site-footer .hours-label { color: #b8cbc5; margin-top: 14px; }
 .site-footer .hours-label:first-of-type { margin-top: 0; }
 .footer-logo {
   font-family: var(--serif);
@@ -788,7 +790,7 @@ p { margin: 0 0 1em; }
 }
 
 /* Gold auf dunklen Bändern */
-.cta-band .gold { color: var(--gold-light); }
+.cta-band .gold { color: var(--gold-text); }
 
 /* Helles CTA-Band mit Goldrahmen (Rezept) */
 .cta-band.cta-light { background: var(--cream); color: var(--text); border: 1px solid var(--gold-soft); }
@@ -799,7 +801,7 @@ p { margin: 0 0 1em; }
 .cta-band.cta-light .eyebrow { position: relative; }
 
 /* Lange deutsche Wörter in Überschriften auf dem Handy trennen */
-h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+h1, h2, h3 { overflow-wrap: break-word; hyphens: manual; -webkit-hyphens: manual; }
 
 /* ---------- Arzt-Profilseiten ---------- */
 .profile-hero { display: grid; gap: 32px; align-items: center; }
