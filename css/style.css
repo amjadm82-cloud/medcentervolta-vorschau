@@ -800,3 +800,32 @@ p { margin: 0 0 1em; }
 
 /* Lange deutsche Wörter in Überschriften auf dem Handy trennen */
 h1, h2, h3 { overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+
+/* ---------- Arzt-Profilseiten ---------- */
+.profile-hero { display: grid; gap: 32px; align-items: center; }
+.profile-photo { max-width: 340px; }
+.back-link { display: inline-block; margin-bottom: 14px; font-size: 0.9rem; color: var(--gold-text); text-decoration: none; }
+.back-link:hover { text-decoration: underline; }
+.cv-list { margin: 0 0 8px; }
+.prose .cv-list > li { padding: 12px 0; border-top: 1px solid var(--line); }
+.prose .cv-list > li:first-child { border-top: 0; }
+.cv-entry { display: grid; gap: 4px; }
+.cv-date { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-text); }
+.cv-entry strong { color: var(--ink); font-weight: 600; }
+.prose .cv-sub { margin: 4px 0 0; padding: 0; list-style: none; }
+.prose .cv-sub li { padding: 1px 0; border: 0; }
+.prose ol.cv-list { padding-left: 1.2em; }
+.person-link { color: inherit; text-decoration: none; }
+.person-link:hover h3, .person-link:hover figcaption { color: var(--gold-text); }
+.profile-more { display: inline-block; margin-top: 8px; font-size: 0.85rem; font-weight: 600; color: var(--gold-text); text-decoration: none; }
+@media (min-width: 720px) {
+  .profile-hero { grid-template-columns: 300px 1fr; gap: 56px; }
+  .cv-entry { grid-template-columns: 170px 1fr; gap: 20px; }
+}
+.profile-facts { margin: 22px 0 26px; display: grid; gap: 12px; }
+.profile-facts div { display: grid; gap: 6px; }
+.profile-facts dt { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-text); }
+.profile-facts dd { margin: 0; color: var(--ink); }
+.chip { display: inline-block; margin: 0 6px 6px 0; padding: 5px 12px; border: 1px solid var(--line); background: #fff; font-size: 0.85rem; line-height: 1.3; }
+.prose p.profile-intro { font-size: 1.12rem; line-height: 1.75; color: var(--ink); }
+@media (min-width: 720px) { .profile-facts div { grid-template-columns: 130px 1fr; align-items: baseline; } }

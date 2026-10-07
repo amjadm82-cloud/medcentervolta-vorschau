@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rezept anfragen – MedCenter Volta, Basel</title>
-  <meta name="description" content="Fragen Sie Ihr Rezept beim MedCenter Volta in Basel online an.">
   <meta name="robots" content="noindex, nofollow">
+  <title>Dr. med. Elif Keser – MedCenter Volta, Basel</title>
+  <meta name="description" content="Dr. med. Elif Keser, Fachärztin für Allgemeine Innere Medizin FMH im MedCenter Volta, Basel – Werdegang und Qualifikationen.">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,9 +44,9 @@
       <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html">Start</a></li>
-          <li><a href="team.html">Team</a></li>
+          <li><a href="team.html" aria-current="page">Team</a></li>
           <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="rezept.html" aria-current="page">Rezept</a></li>
+          <li><a href="rezept.html">Rezept</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
@@ -66,85 +66,63 @@
 
   <main id="inhalt">
     <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">Rezept anfragen</span>
-        <h1>Ihr Rezept – <span class="gold">einfach online anfragen</span></h1>
-        <p class="lead">Sie benötigen ein Rezept für ein Medikament? Füllen Sie das Formular aus. Ihre Anfrage geht direkt an die Ärztin oder den Arzt, den Sie auswählen.</p>
+      <div class="container profile-hero">
+        <div class="media media-portrait profile-photo"><img src="img/team-keser.jpg" alt="Dr. med. Elif Keser" width="800" height="800"></div>
+        <div>
+          <a class="back-link" href="team.html">← Zum ganzen Team</a>
+          <h1>Dr. med. Elif Keser</h1>
+          <p class="lead">Fachärztin für Allgemeine Innere Medizin FMH</p>
+          <dl class="profile-facts">
+            <div><dt>Schwerpunkte</dt><dd><span class="chip">Hausarztmedizin</span><span class="chip">Innere Medizin</span><span class="chip">Ultraschall</span><span class="chip">Praxislabor</span></dd></div>
+            <div><dt>Sprachen</dt><dd>Deutsch, Türkisch</dd></div>
+          </dl>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://termine.epaad.ch/mcv" target="_blank" rel="noopener">Termin buchen</a>
+            <a class="btn btn-outline" href="rezept.html">Rezept anfragen</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top: 16px;">
-      <div class="container split" style="align-items: start;">
-        <div class="form-card">
-          <p class="form-message is-error" id="rezept-fehler" hidden>Ihre Anfrage konnte nicht gesendet werden. Bitte prüfen Sie Ihre Angaben und versuchen Sie es noch einmal – oder rufen Sie uns an: 061 322 61 11.</p>
-          <form class="rezept-form" action="rezept-senden.php" method="post" novalidate>
-            <div class="form-grid">
-              <div class="field full">
-                <label for="rf-name">Name des Patienten / der Patientin</label>
-                <input id="rf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
-              </div>
-              <div class="field">
-                <label for="rf-geburtsdatum">Geburtsdatum</label>
-                <input id="rf-geburtsdatum" name="geburtsdatum" type="date" autocomplete="bday" min="1900-01-01" required>
-              </div>
-              <div class="field">
-                <label for="rf-telefon">Telefonnummer</label>
-                <input id="rf-telefon" name="telefon" type="tel" autocomplete="tel" maxlength="30" pattern="[0-9+()/ .\-]{6,30}" required>
-              </div>
-              <div class="field full">
-                <label for="rf-arzt">Ärztin / Arzt</label>
-                <select id="rf-arzt" name="arzt" required>
-                  <option value="">Bitte auswählen</option>
-                  <option value="mallisho">Herr Dr. Mallisho</option>
-                  <option value="lumpp">Herr Dr. Lumpp</option>
-                  <option value="keser">Frau Dr. Keser</option>
-                  <option value="osterwalder">Herr Dr. Osterwalder</option>
-                  <option value="gecas">Herr Dr. Gecas</option>
-                </select>
-              </div>
-              <div class="field full">
-                <label for="rf-nachricht">Medikament / Nachricht <span class="hint">– z.&nbsp;B. Name und Stärke des Medikaments</span></label>
-                <textarea id="rf-nachricht" name="nachricht" maxlength="1000" required></textarea>
-              </div>
-
-              <!-- Spam-Schutz: dieses Feld ist für Menschen unsichtbar und muss leer bleiben -->
-              <div class="hp-field" aria-hidden="true">
-                <label for="rf-website">Website</label>
-                <input id="rf-website" name="website" type="text" tabindex="-1" autocomplete="off">
-              </div>
-              <input type="hidden" name="token" value="">
-
-              <div class="full check-field">
-                <input id="rf-datenschutz" name="datenschutz" type="checkbox" required>
-                <label for="rf-datenschutz">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung der Rezeptanfrage verwendet und dafür per E-Mail an die Praxis übermittelt werden.</label>
-              </div>
-              <div class="full">
-                <button class="btn btn-primary" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Rezept anfragen</button>
-              </div>
-            </div>
-            <p class="form-message" tabindex="-1" role="status" aria-live="polite"></p>
-            <noscript><p class="form-message is-visible is-error">Bitte aktivieren Sie JavaScript, um das Formular zu senden – oder rufen Sie uns an: 061 322 61 11.</p></noscript>
-          </form>
-        </div>
-
-        <div class="cards" style="grid-template-columns: 1fr;">
-          <div class="notice notice-emergency">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-            <div>
-              <strong>Nicht für Notfälle</strong>
-              <p>Bei akuten Beschwerden nutzen Sie bitte nicht dieses Formular, sondern rufen Sie uns an: <a href="tel:+41613226111">061 322 61 11</a>. Ausserhalb der Öffnungszeiten erreichen Sie die Medizinische Notfallzentrale unter <a href="tel:+41612611515">061 261 15 15</a>.</p>
-            </div>
-          </div>
-          <div class="info-box">
-            <h3><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>Lieber telefonisch?</h3>
-            <p>Sie können Ihr Rezept auch gerne telefonisch anfragen. Wir sind zu diesen Zeiten telefonisch erreichbar:</p>
-            <table class="hours">
-              <tr><th>Mo, Di, Mi, Fr</th><td>8.00–11.00<br>14.00–17.00</td></tr>
-              <tr><th>Donnerstag</th><td>8.00–11.00</td></tr>
-            </table>
-            <p style="margin: 16px 0 0;"><a class="btn btn-outline" href="tel:+41613226111"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 061 322 61 11</a></p>
-          </div>
-        </div>
+    <section class="section" style="padding-top: 8px;">
+      <div class="container prose">
+          <h2>Zur Person</h2>
+          <p class="profile-intro">Dr. med. Elif Keser ist Fachärztin für Innere Medizin und seit September 2024 als Hausärztin im MedCenter Volta tätig.</p>
+          <p class="profile-intro">Sie bringt langjährige Erfahrung aus Klinik und Praxis mit: Nach acht Jahren in der Inneren Medizin der Kliniken des Landkreises Lörrach arbeitet sie seit 2018 als Hausärztin. Ihre Kenntnisse in Ultraschall des Bauches und des Herzens hat sie mit Kursen und Hospitationen an der Universitätsklinik Freiburg und im Herzzentrum Bad Krozingen vertieft.</p>
+          <p class="profile-intro">Ihre Patientinnen und Patienten betreut sie auf Deutsch und auf Türkisch.</p>
+          <h2>Beruflicher Werdegang</h2>
+          <ul class="cv-list">
+            <li class="cv-entry"><span class="cv-date">seit 09/2024</span><div><strong>Hausärztin</strong><ul class="cv-sub"><li>MedCenter Volta</li></ul></div></li>
+            <li class="cv-entry"><span class="cv-date">12/2022 – 03/2024</span><div><strong>Hausärztin</strong><ul class="cv-sub"><li>Topmed AG</li></ul></div></li>
+            <li class="cv-entry"><span class="cv-date">11/2018 – 11/2022</span><div><strong>Hausärztin</strong><ul class="cv-sub"><li>Centramed AG</li></ul></div></li>
+            <li class="cv-entry"><span class="cv-date">01/2009 – 12/2016</span><div><strong>Innere Abteilung</strong><ul class="cv-sub"><li>Kliniken des Landkreises Lörrach GmbH (Lörrach, Schopfheim, Rheinfelden)</li></ul></div></li>
+          </ul>
+          <h2>Promotion</h2>
+          <ul class="cv-list">
+            <li class="cv-entry"><span class="cv-date">02/2017 – 07/2019</span><div><strong>«Clinical Validation of a Novel High-Sensitivity Cardiac Troponin I Assay for Diagnosis of Acute Myocardial Infarction»</strong><ul class="cv-sub"><li>Brustschmerzstudie, kardiologische Forschung des Universitätsspitals Basel</li><li>Doktorvater: Prof. Dr. med. Christian Müller</li></ul></div></li>
+          </ul>
+          <h2>Aus- und Weiterbildung</h2>
+          <ul class="cv-list">
+            <li class="cv-entry"><span class="cv-date">31.05.2017</span><div><strong>Erwerb des Facharzttitels Innere Medizin</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">11.06.2008</span><div><strong>Erteilung der Approbationsurkunde</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">09/2003</span><div><strong>Physikum</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">ab 10/1998</span><div><strong>Studium der Humanmedizin</strong><ul class="cv-sub"><li>Albert-Ludwigs-Universität Freiburg</li></ul></div></li>
+          </ul>
+          <h2>Sprachen</h2>
+          <ul class="cv-list">
+            <li>Türkisch (Muttersprache)</li>
+            <li>Deutsch (2. Muttersprache)</li>
+            <li>Englisch (Grundkenntnisse)</li>
+            <li>Zazaki (Grundkenntnisse)</li>
+          </ul>
+          <h2>Zusätzliche Qualifikationen und Kurse</h2>
+          <ul class="cv-list">
+            <li class="cv-entry"><span class="cv-date">16.11.2023</span><div><strong>MFK Stufe 1</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">19.03.2022</span><div><strong>Strahlenschutzkurs im Niedrig- und Mitteldosisbereich</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">26.04.2019</span><div><strong>Fähigkeitsausweis Praxislabor (KHM)</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">10.07.2015</span><div><strong>Herzechokardiographiekurs</strong><ul class="cv-sub"><li>anschliessend Gastärztin im Herzzentrum Bad Krozingen zur Erweiterung der Kenntnisse</li></ul></div></li>
+            <li class="cv-entry"><span class="cv-date">31.01.2013 / 12.03.2015</span><div><strong>Grund- und Aufbaukurs Abdomensonographie</strong><ul class="cv-sub"><li>Gastärztin an der Universitätsklinik Freiburg zur Vertiefung der Kenntnisse</li></ul></div></li>
+          </ul>
       </div>
     </section>
   </main>

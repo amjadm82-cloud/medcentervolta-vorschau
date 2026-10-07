@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rezept anfragen – MedCenter Volta, Basel</title>
-  <meta name="description" content="Fragen Sie Ihr Rezept beim MedCenter Volta in Basel online an.">
   <meta name="robots" content="noindex, nofollow">
+  <title>Dr. med. Peter Osterwalder – MedCenter Volta, Basel</title>
+  <meta name="description" content="Dr. med. Peter Osterwalder, Facharzt Innere Medizin &amp; Sportmedizin im MedCenter Volta, Basel – Werdegang und Qualifikationen.">
   <link rel="icon" href="img/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,9 +44,9 @@
       <nav class="main-nav" id="main-nav" aria-label="Hauptnavigation">
         <ul>
           <li><a href="index.html">Start</a></li>
-          <li><a href="team.html">Team</a></li>
+          <li><a href="team.html" aria-current="page">Team</a></li>
           <li><a href="leistungen.html">Leistungen</a></li>
-          <li><a href="rezept.html" aria-current="page">Rezept</a></li>
+          <li><a href="rezept.html">Rezept</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav>
@@ -66,85 +66,56 @@
 
   <main id="inhalt">
     <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">Rezept anfragen</span>
-        <h1>Ihr Rezept – <span class="gold">einfach online anfragen</span></h1>
-        <p class="lead">Sie benötigen ein Rezept für ein Medikament? Füllen Sie das Formular aus. Ihre Anfrage geht direkt an die Ärztin oder den Arzt, den Sie auswählen.</p>
+      <div class="container profile-hero">
+        <div class="media media-portrait profile-photo"><img src="img/team-osterwalder.jpg?v=2" alt="Dr. med. Peter Osterwalder" width="800" height="800"></div>
+        <div>
+          <a class="back-link" href="team.html">← Zum ganzen Team</a>
+          <h1>Dr. med. Peter Osterwalder</h1>
+          <p class="lead">Facharzt Innere Medizin &amp; Sportmedizin</p>
+          <dl class="profile-facts">
+            <div><dt>Schwerpunkte</dt><dd><span class="chip">Innere Medizin</span><span class="chip">Sportmedizin</span><span class="chip">Notfallmedizin</span></dd></div>
+            <div><dt>Sprachen</dt><dd>Deutsch, Englisch</dd></div>
+          </dl>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://termine.epaad.ch/mcv" target="_blank" rel="noopener">Termin buchen</a>
+            <a class="btn btn-outline" href="rezept.html">Rezept anfragen</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section" style="padding-top: 16px;">
-      <div class="container split" style="align-items: start;">
-        <div class="form-card">
-          <p class="form-message is-error" id="rezept-fehler" hidden>Ihre Anfrage konnte nicht gesendet werden. Bitte prüfen Sie Ihre Angaben und versuchen Sie es noch einmal – oder rufen Sie uns an: 061 322 61 11.</p>
-          <form class="rezept-form" action="rezept-senden.php" method="post" novalidate>
-            <div class="form-grid">
-              <div class="field full">
-                <label for="rf-name">Name des Patienten / der Patientin</label>
-                <input id="rf-name" name="name" type="text" autocomplete="name" maxlength="100" required>
-              </div>
-              <div class="field">
-                <label for="rf-geburtsdatum">Geburtsdatum</label>
-                <input id="rf-geburtsdatum" name="geburtsdatum" type="date" autocomplete="bday" min="1900-01-01" required>
-              </div>
-              <div class="field">
-                <label for="rf-telefon">Telefonnummer</label>
-                <input id="rf-telefon" name="telefon" type="tel" autocomplete="tel" maxlength="30" pattern="[0-9+()/ .\-]{6,30}" required>
-              </div>
-              <div class="field full">
-                <label for="rf-arzt">Ärztin / Arzt</label>
-                <select id="rf-arzt" name="arzt" required>
-                  <option value="">Bitte auswählen</option>
-                  <option value="mallisho">Herr Dr. Mallisho</option>
-                  <option value="lumpp">Herr Dr. Lumpp</option>
-                  <option value="keser">Frau Dr. Keser</option>
-                  <option value="osterwalder">Herr Dr. Osterwalder</option>
-                  <option value="gecas">Herr Dr. Gecas</option>
-                </select>
-              </div>
-              <div class="field full">
-                <label for="rf-nachricht">Medikament / Nachricht <span class="hint">– z.&nbsp;B. Name und Stärke des Medikaments</span></label>
-                <textarea id="rf-nachricht" name="nachricht" maxlength="1000" required></textarea>
-              </div>
-
-              <!-- Spam-Schutz: dieses Feld ist für Menschen unsichtbar und muss leer bleiben -->
-              <div class="hp-field" aria-hidden="true">
-                <label for="rf-website">Website</label>
-                <input id="rf-website" name="website" type="text" tabindex="-1" autocomplete="off">
-              </div>
-              <input type="hidden" name="token" value="">
-
-              <div class="full check-field">
-                <input id="rf-datenschutz" name="datenschutz" type="checkbox" required>
-                <label for="rf-datenschutz">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung der Rezeptanfrage verwendet und dafür per E-Mail an die Praxis übermittelt werden.</label>
-              </div>
-              <div class="full">
-                <button class="btn btn-primary" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Rezept anfragen</button>
-              </div>
-            </div>
-            <p class="form-message" tabindex="-1" role="status" aria-live="polite"></p>
-            <noscript><p class="form-message is-visible is-error">Bitte aktivieren Sie JavaScript, um das Formular zu senden – oder rufen Sie uns an: 061 322 61 11.</p></noscript>
-          </form>
-        </div>
-
-        <div class="cards" style="grid-template-columns: 1fr;">
-          <div class="notice notice-emergency">
-            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>
-            <div>
-              <strong>Nicht für Notfälle</strong>
-              <p>Bei akuten Beschwerden nutzen Sie bitte nicht dieses Formular, sondern rufen Sie uns an: <a href="tel:+41613226111">061 322 61 11</a>. Ausserhalb der Öffnungszeiten erreichen Sie die Medizinische Notfallzentrale unter <a href="tel:+41612611515">061 261 15 15</a>.</p>
-            </div>
-          </div>
-          <div class="info-box">
-            <h3><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>Lieber telefonisch?</h3>
-            <p>Sie können Ihr Rezept auch gerne telefonisch anfragen. Wir sind zu diesen Zeiten telefonisch erreichbar:</p>
-            <table class="hours">
-              <tr><th>Mo, Di, Mi, Fr</th><td>8.00–11.00<br>14.00–17.00</td></tr>
-              <tr><th>Donnerstag</th><td>8.00–11.00</td></tr>
-            </table>
-            <p style="margin: 16px 0 0;"><a class="btn btn-outline" href="tel:+41613226111"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 061 322 61 11</a></p>
-          </div>
-        </div>
+    <section class="section" style="padding-top: 8px;">
+      <div class="container prose">
+          <h2>Zur Person</h2>
+          <p class="profile-intro">Dr. med. Peter Osterwalder ist Facharzt für Innere Medizin mit Fähigkeitsausweis Sportmedizin und blickt auf über 30 Jahre ärztliche Erfahrung zurück.</p>
+          <p class="profile-intro">Nach Assistenzjahren in Innerer Medizin, Chirurgie, Pädiatrie und Psychiatrie war er in der Permanence Hauptbahnhof Zürich tätig – ab 2003 in leitender Funktion und als Mitglied des Verwaltungsrats. Von 2007 bis 2021 führte er seine eigene Praxis in Zürich, danach arbeitete er in der Gruppenpraxis SANAMEA Kleinbasel und in der ORTHOKLINIK Dornach.</p>
+          <h2>Beruflicher Werdegang</h2>
+          <ul class="cv-list">
+            <li class="cv-entry"><span class="cv-date">1990–1998</span><div><strong>Assistenzarztstellen</strong><ul class="cv-sub"><li>Innere Medizin (5 Jahre)</li><li>Chirurgie (1 Jahr)</li><li>Pädiatrie (1 Jahr)</li><li>Psychiatrie (1 Jahr)</li><li>Diverse Praxisvertretungen und zusätzliche Einsätze</li></ul></div></li>
+            <li class="cv-entry"><span class="cv-date">1998</span><div><strong>Erwerb des Facharzttitels für Innere Medizin</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">1998–2007</span><div><strong>Selbständige Tätigkeit in der Permanence Hauptbahnhof Zürich</strong><ul class="cv-sub"><li>ab 2003 in leitender Funktion sowie Mitglied des Verwaltungsrats</li></ul></div></li>
+            <li class="cv-entry"><span class="cv-date">2003–2004</span><div><strong>Weiterbildung mit Abschluss Fähigkeitsausweis Sportmedizin</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">2007–2021</span><div><strong>Eigene Praxis</strong><ul class="cv-sub"><li>Tödistrasse 42, Zürich</li></ul></div></li>
+            <li class="cv-entry"><span class="cv-date">2021–2024</span><div><strong>Gruppenpraxis SANAMEA Kleinbasel und ORTHOKLINIK Dornach</strong></div></li>
+          </ul>
+          <h2>Aus- und Weiterbildung</h2>
+          <ul class="cv-list">
+            <li class="cv-entry"><span class="cv-date">1983</span><div><strong>Maturität Typ C</strong></div></li>
+            <li class="cv-entry"><span class="cv-date">1989</span><div><strong>Abschluss des Medizinstudiums und Promotion</strong></div></li>
+          </ul>
+          <h2>Qualifikationen und Kompetenzen</h2>
+          <ul class="cv-list">
+            <li>Innere Medizin: umfassende Erfahrung, inklusive Praxisvertretungen und Notfallmedizin</li>
+            <li>Sportmedizin: Zusatzausbildung und langjährige praktische Anwendung</li>
+            <li>Führung: Leitungs- und Verwaltungsratserfahrung in der Permanence Hauptbahnhof Zürich</li>
+          </ul>
+          <h2>Sprachen</h2>
+          <ul class="cv-list">
+            <li>Deutsch fliessend</li>
+            <li>Englisch fliessend</li>
+          </ul>
+          <h2>Persönliches</h2>
+          <p>Dr. Osterwalder ist 1964 geboren, verheiratet mit Dr. Heidi Osterwalder, Psychiaterin, und Vater von zwei erwachsenen Töchtern.</p>
       </div>
     </section>
   </main>
