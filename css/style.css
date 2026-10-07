@@ -274,14 +274,7 @@ p { margin: 0 0 1em; }
   height: 100%;
   object-fit: cover;
 }
-.media-framed { margin: 0 14px 14px 0; z-index: 0; }
-.media-framed::after {
-  content: "";
-  position: absolute;
-  inset: 14px -14px -14px 14px;
-  border: 1px solid var(--gold-soft);
-  z-index: -1;
-}
+.media-framed { margin: 0; }   /* früher mit versetztem Goldrahmen – entfernt */
 .media-hero { aspect-ratio: 16 / 10; }
 .media-hero img { object-position: 74% 50%; }
 .media-portrait { aspect-ratio: 1 / 1; }
