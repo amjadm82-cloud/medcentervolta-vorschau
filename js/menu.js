@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (PREVIEW) {
-      showMessage(form, "Design-Vorschau: Hier wird das Formular nicht gesendet. Auf der echten Website geht die Anfrage direkt an die gewählte Ärztin bzw. den gewählten Arzt.", false);
+      showMessage(form, "Design-Vorschau: Hier wird das Formular nicht gesendet. Auf der echten Website geht die Anfrage an die Praxis.", false);
       return;
     }
 
