@@ -824,3 +824,21 @@ h1, h2, h3 { overflow-wrap: break-word; hyphens: manual; -webkit-hyphens: manual
 .chip { display: inline-block; margin: 0 6px 6px 0; padding: 5px 12px; border: 1px solid var(--line); background: #fff; font-size: 0.85rem; line-height: 1.3; }
 .prose p.profile-intro { font-size: 1.12rem; line-height: 1.75; color: var(--ink); }
 @media (min-width: 720px) { .profile-facts div { grid-template-columns: 130px 1fr; align-items: baseline; } }
+
+/* ---------- Digitale Rezeption (Kontakt) ---------- */
+.contact-list li.contact-note { font-size: 0.95rem; color: var(--muted); line-height: 1.6; }
+.emergency-list { list-style: none; padding: 0; margin: 6px 0 0; }
+.emergency-list li { padding: 3px 0; }
+.faq-title { margin: 56px 0 16px; font-size: 1.6rem; }
+.faq { border-top: 1px solid var(--line); max-width: 52em; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; padding: 18px 32px 18px 0; font-weight: 600; position: relative; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; font-weight: 400; color: var(--gold-text); }
+.faq details[open] summary::after { content: "–"; }
+.faq details p { margin: 0 0 18px; color: var(--muted); }
+.lang-notes { margin-top: 48px; display: grid; gap: 14px; max-width: 52em; }
+.lang-notes p { margin: 0; font-size: 0.95rem; color: var(--muted); }
+.lang-notes strong { display: inline-block; min-width: 2.4em; color: var(--ink); letter-spacing: 0.08em; }
+.lang-notes p[dir="rtl"] strong { margin-left: 0.6em; }
+a[href^="tel:"] { white-space: nowrap; }
