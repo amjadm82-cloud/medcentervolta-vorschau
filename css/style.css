@@ -842,3 +842,4 @@ h1, h2, h3 { overflow-wrap: break-word; hyphens: manual; -webkit-hyphens: manual
 .lang-notes strong { display: inline-block; min-width: 2.4em; color: var(--ink); letter-spacing: 0.08em; }
 .lang-notes p[dir="rtl"] strong { margin-left: 0.6em; }
 a[href^="tel:"] { white-space: nowrap; }
+.muted-inline { color: var(--muted); }
