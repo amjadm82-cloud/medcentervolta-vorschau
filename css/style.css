@@ -844,3 +844,16 @@ h1, h2, h3 { overflow-wrap: break-word; hyphens: manual; -webkit-hyphens: manual
 a[href^="tel:"] { white-space: nowrap; }
 .muted-inline { color: var(--muted); white-space: nowrap; }
 .contact-list li.phone-2 { padding-top: 0; padding-left: calc(4.5em + 0.3em); }
+/* ---------- Startseite: Hinweis digitale Rezeption ---------- */
+.hero-reception { margin-top: 28px; padding: 18px 22px; background: var(--sage-light); border-left: 3px solid var(--darker); max-width: 36em; }
+.hero-reception p { margin: 0 0 8px; font-size: 0.95rem; line-height: 1.6; color: var(--muted); }
+.hero-reception p:last-child { margin-bottom: 0; }
+.hero-reception-head { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 10px; font-size: 1.05rem !important; color: var(--ink) !important; }
+.hero-reception-head svg { width: 20px; height: 20px; color: var(--darker); flex: none; }
+.hero-reception-head a { font-weight: 700; }
+.hero-reception-langs span:first-child { color: var(--ink); font-weight: 600; }
+@media (min-width: 900px) {
+  .hero { padding: 48px 0 88px; }
+  .hero .lead { margin-bottom: 24px; }
+  .hero-reception { margin-top: 22px; }
+}
